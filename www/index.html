@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title>Catch up</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.3.min.js"></script>    
+    <script>
+      $(document).ready(function(){
+			var screen = $.mobile.getScreenHeight();
+			var header = $(".ui-header").hasClass("ui-header-fixed") ? $(".ui-header").outerHeight()  - 1 : $(".ui-header").outerHeight();
+			var footer = $(".ui-footer").hasClass("ui-footer-fixed") ? $(".ui-footer").outerHeight() - 1 : $(".ui-footer").outerHeight();
+			var contentCurrent = $(".ui-content").outerHeight() - $(".ui-content").height();
+			var content = screen - header - footer - contentCurrent;
+			$(".ui-content").height(content);
+			$(".msgContainerDiv").height(content);
+	
+      });
+    </script>
+    <style>
+      .message
+      {
+        padding: 5px 5px 5px 5px;
+      }
+      .msgContainerDiv
+      {
+        overflow-y: scroll;
+      }
+
+	  
+    </style>
+  </head> 
+    
+  <body> 
+ 
+    <div data-role="page" id="chatPage" data-role="page" data-theme="a">
+ 
+        <div data-role="header" data-position='fixed'>
+            <h1>Catch Me</h1>
+        </div>
+ 
+        <div data-role="content"> 
+        <div id="incomingMessages" name="incomingMessages" class="msgContainerDiv" ></div>
+        <div data-role="footer" data-position='fixed'>
+      
+			<textarea name="messageText" id="messageText"></textarea>
+			<button class="ui-btn ui-corner-all" id="SendButton">Send</button>
+		</div>
+        </div>
+    </div>
+	<script type="text/javascript" src="cordova.js"></script>
+	 <script type="text/javascript" src="js/index.js"></script>
+	  <script type="text/javascript">
+            app.initialize();
+        </script>
+		<script src="js/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script>
+		<script src="js/nodeClient.js"></script>
+  </body> 
+</html>
