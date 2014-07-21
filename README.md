@@ -29,7 +29,6 @@ Cordova
 For Further Details visit : http://cordova.apache.org/
 	
 Installing Cordova in Nodejs and creating project visit : http://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html#The%20Command-Line%20Interface
-------------------------------------------------------------------------------------------------------------------------------
 
 Simple Socket IO+cordova program for web and mobile
 ------------------------------------------------------------------------------------------------------------------------------
@@ -65,4 +64,3 @@ The above command create a simple cordova project with folder structures as foll
 	var socket = io.connect( 'http://IPAddress:1034' );
 	This IPAddress shouldn't be localhost give your Valid IP address if you are using mobile broadband 
 	check your public ip using http://whatismyip.com/ and pass that IP
----------------------------------------------------------------------------------------------------------------------------------------
