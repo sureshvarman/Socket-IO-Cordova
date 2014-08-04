@@ -39,7 +39,7 @@ Install 'Socket.io' module and 'express' module using npm as
 	
 Create New Project in cordova using command line
 
-	C:\> create cordova chat com.chat.app Chat
+	C:\> cordova create chat com.chat.app Chat
 	
 The above command create a simple cordova project with folder structures as follows
 					Chat
