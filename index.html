@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Socket-io-cordova : Simple Socket IO+cordova program for web and mobile">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Socket-io-cordova</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/sureshvarman/Socket-IO-Cordova">View on GitHub</a>
+
+          <h1 id="project_title">Socket-io-cordova</h1>
+          <h2 id="project_tagline">Simple Socket IO+cordova program for web and mobile</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/sureshvarman/Socket-IO-Cordova/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/sureshvarman/Socket-IO-Cordova/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="socket-io-cordova" class="anchor" href="#socket-io-cordova"><span class="octicon octicon-link"></span></a>Socket-IO-Cordova</h1>
+
+<p>Simple Socket IO+cordova program for web and mobile</p>
+
+<h2>
+<a name="nodejs" class="anchor" href="#nodejs"><span class="octicon octicon-link"></span></a>Nodejs</h2>
+
+<pre><code>Nodejs is a server side javascript platform on Chrome's JavaScript runtime. 
+
+Advantages  
+----------
+Event-Driven
+Non-blocking I/O
+Light Weight Because of Javascript
+</code></pre>
+
+<p>For further Details and installation Guide visit : <a href="http://nodejs.org/">http://nodejs.org/</a></p>
+
+<h2>
+<a name="cordova" class="anchor" href="#cordova"><span class="octicon octicon-link"></span></a>Cordova</h2>
+
+<pre><code>Apache Cordova is a platform for building mobile applications without the knowledge of native code.
+
+Advantages  
+----------
+Multi-platform Mobile application Development with HTML5, Javascript, CSS.
+apache cordova engine takes care of native code.
+Easy for web developers to create a mobile application without native code knowledge
+</code></pre>
+
+<p>For Further Details visit : <a href="http://cordova.apache.org/">http://cordova.apache.org/</a></p>
+
+<p>Installing Cordova in Nodejs and creating project visit : <a href="http://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html#The%20Command-Line%20Interface">http://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html#The%20Command-Line%20Interface</a></p>
+
+<h2>
+<a name="simple-socket-iocordova-program-for-web-and-mobile" class="anchor" href="#simple-socket-iocordova-program-for-web-and-mobile"><span class="octicon octicon-link"></span></a>Simple Socket IO+cordova program for web and mobile</h2>
+
+<p>Install 'Socket.io' module and 'express' module using npm as</p>
+
+<pre><code>C:\&gt;npm install socket.io
+C:\&gt;npm install express
+</code></pre>
+
+<p>Create New Project in cordova using command line</p>
+
+<pre><code>C:\&gt; cordova create chat com.chat.app Chat
+</code></pre>
+
+<p>The above command create a simple cordova project with folder structures as follows
+                    Chat
+                     |
+                     |---&gt;hooks
+                     |---&gt;platforms
+                     |---&gt;plugins
+                     |---&gt;www
+                     |---&gt;config
+                     |
+    The WWW is the root folder where we are going to spend our development Time</p>
+
+<pre><code>copy the directory www from repository and replace that with your www folder
+
+NOTE : For who are not familiar with nodejs you have to copy your node modules socket.io and express to WWW/js/node_modules
+        and who have to start your nodeserver using following command
+        C:\chat\www\js&gt;node nodeserver.js
+
+nodeclient.js
+-------------
+Change your IP address as follow in nodeclient.js file
+var socket = io.connect( 'http://IPAddress:1034' );
+This IPAddress shouldn't be localhost give your Valid IP address if you are using mobile broadband 
+check your public ip using http://whatismyip.com/ and pass that IP
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Socket-io-cordova maintained by <a href="https://github.com/sureshvarman">sureshvarman</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
